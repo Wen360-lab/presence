@@ -1,5 +1,18 @@
 import "@/style/globals.css";
 
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Présence - La clé du succès",
+  description: "Gestion de l'assiduité scolaire au Gabon",
+  // C'est ici qu'on force l'icône HD depuis le dossier public
+  icons: {
+    icon: "/Logo.png", 
+  },
+};
+
+
 export default function RootLayout({
   children,
 }: Readonly<{

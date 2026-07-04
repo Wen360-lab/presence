@@ -1,12 +1,13 @@
 import '@/style/globals.css'
 import Image from 'next/image';
 
+
 export default function Home() {
   return (
     <section className='flex flex-col items-center justify-center' >
       <div className="mb-6 transform hover:scale-105 transition-transform duration-300">
         <Image 
-          src="/logoRemoveBg.png" // Assure-toi que ton image HD est bien nommée ainsi dans /public
+          src="/logoPresence.svg" 
           alt="Présence - La clé du succès" 
           width={300} 
           height={300} 

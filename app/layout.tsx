@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Gestion de l'assiduité scolaire au Gabon",
   // C'est ici qu'on force l'icône HD depuis le dossier public
   icons: {
-    icon: "/Logo.png", 
+    icon: "/iconPresence.svg", 
   },
 };
 

@@ -4,13 +4,13 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <section className='flex flex-col items-center justify-center' >
-      <div className="mb-6 transform hover:scale-105 transition-transform duration-300">
+    <section className='flex flex-col items-center justify-center mt-4' >
+      <div className="mb-6 transform hover:scale-105 transition-transform duration-300 cursor-pointer">
         <Image 
           src="/logoPresence.svg" 
           alt="Présence - La clé du succès" 
-          width={300} 
-          height={300} 
+          width={90} 
+          height={90} 
           className="object-contain"
           priority
         />

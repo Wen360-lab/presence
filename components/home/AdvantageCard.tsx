@@ -13,7 +13,7 @@ type AdvantageCardProps = {
 export default function AdvantageCard({ number, title, soustitle, description, delay = 0 }: AdvantageCardProps) {
   return (
     <motion.div
-      className="card-advantage flex flex-col items-start shadow-xl"
+      className="card-advantage flex flex-col items-start shadox"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

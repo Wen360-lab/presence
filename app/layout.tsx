@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className="min-h-full flex flex-col bg-[F8F7F2]">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

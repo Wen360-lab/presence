@@ -107,6 +107,13 @@
     border-radius: 0.75rem;
     padding: 1.5rem;
   }
+
+  /* Carte témoignage (fond plein blanc) */
+  .card-testimonial {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
 }
 
 section {

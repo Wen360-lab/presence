@@ -7,6 +7,7 @@ import Header from '@/components/home/Header'
 import Hero from '@/components/home/Hero'
 import Features from '@/components/home/Features'
 import Avantages from '@/components/home/Avantages'
+import Testimonials from '@/components/home/Avis'
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <hr className='w-full bg-emeraude p-1'/>
       <Features/>
       <Avantages/>
+      <Testimonials/>
 
 
     </section>

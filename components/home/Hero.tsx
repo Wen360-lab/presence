@@ -16,7 +16,7 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          <Image src="/checklist-cuate.svg" alt="" width={270} height={350} priority />
+          <Image src="/Checklist-cuate.svg" alt="" width={270} height={350} priority />
         </motion.div>
 
         {/* Contenu central */}

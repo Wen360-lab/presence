@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function History() {
   return (
-    <section className="px-6 py-20 bg-white w-full">
+    <section id="apropos" className="px-6 py-20 bg-white w-full">
       <div className="mx-auto max-w-5xl">
         <motion.h2
           className="text-center text-3xl uppercase text-black md:text-4xl"

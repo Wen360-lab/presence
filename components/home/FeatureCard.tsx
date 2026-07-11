@@ -14,7 +14,7 @@ type FeatureCardProps = {
 export default function FeatureCard({ illustration, title, description, number, delay = 0 }: FeatureCardProps) {
   return (
     <motion.div
-      className="flex flex-col items-start rounded-2xl border border-grey bg-cream p-6 shadow"
+      className="flex flex-col items-start rounded-2xl border border-grey bg-cream p-6 shadow-xl"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

@@ -69,8 +69,8 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <button className="btn-primary">Commencer l&apos;appel</button>
-            <button className="btn-secondary">Créer un compte</button>
+            <button className="btn-primary shadow-xl">Commencer l&apos;appel</button>
+            <button className="btn-secondary shadow-xl">Créer un compte</button>
           </motion.div>
 
         </div>

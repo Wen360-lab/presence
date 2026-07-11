@@ -6,14 +6,17 @@ import AdvantageCard from './AdvantageCard'
 const advantages = [
   {
     title: 'Rapidité',
+    soustitle: 'Pointer en quelques secondes',
     description: 'Toute une classe enregistrée en un instant, même entre deux cours, sans perdre de temps.',
   },
   {
     title: 'Sécurité',
+    soustitle: 'Des registres infalsifiables',
     description: "Une fois validée, une présence ne peut plus être modifiée. Fini les registres trafiqués ou contestés.",
   },
   {
     title: 'Efficacité',
+    soustitle: 'Zero paperasse, zero ressaisie',
     description: 'Une seule interface pour tout centraliser, sans ressaisie ni papier. Simplicité et efficacité.',
   },
 ]
@@ -49,6 +52,7 @@ export default function Avantages() {
               key={advantage.title}
               number={index + 1}
               title={advantage.title}
+              soustitle={advantage.soustitle}
               description={advantage.description}
               delay={0.1 * index}
             />

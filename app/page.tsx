@@ -1,22 +1,21 @@
 import '@/style/globals.css'
-import Image from 'next/image';
+
+
+// Importation des composants
+import Header from '@/components/home/Header'
+import Hero from '@/components/home/Hero'
+
+
+
 
 
 export default function Home() {
   return (
-    <section className='flex flex-col items-center justify-center mt-4' >
-      <div className="mb-6 transform hover:scale-105 transition-transform duration-300 cursor-pointer">
-        <Image 
-          src="/logoPresence.svg" 
-          alt="Présence - La clé du succès" 
-          width={90} 
-          height={90} 
-          className="object-contain"
-          priority
-        />
-      </div>
+    <section className='flex flex-col items-center justify-center' >
+      <Header/>
+      <Hero/>
 
-    <h1 className='text-[#3F5D4D] text-xl '>Soyez la bienvenue sur Présence</h1>
+
     </section>
   );
 }

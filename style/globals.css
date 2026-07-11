@@ -1,1 +1,110 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+
+@theme {
+  /* Couleur de emeraude */
+  --color-emeraude: #126531;
+  --color-emeraude-50: #dcece3;
+
+
+  /* Fond principal (crème) */
+  --color-cream:      #f8f7f2;
+  --color-surface:    #ffffff;
+
+  /* Texte neutres  */
+  --color-grey: #666666;
+
+  /* Typographie (3 rôles distincts) */
+  --font-oswald: "Oswald", sans-serif;   /* titres */
+  --font-inter:  "Inter", sans-serif;    /* sous-titres, corps */
+  --font-sora:   "Sora", sans-serif;     /* badges, boutons */
+
+
+  /* Rayon des boutons (valeur Figma) */
+  --radius-btn: 10px;
+  --radius-pill: 999px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-grey);
+    font-family: var(--font-inter);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-oswald);
+    font-weight: 700;
+  }
+
+  p {
+    font-family: var(--font-inter);
+    color: var(--color-grey);
+  }
+
+}
+
+@layer components {
+  /* Nav en pilule */
+  .nav-pill {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-pill);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-inter);
+  }
+
+  /* CTA primaire (vert plein) */
+  .btn-primary {
+    background-color: var(--color-emeraude);
+    color: #ffffff;
+    border-radius: var(--radius-btn);
+    padding: 0.625rem 1.25rem;
+    font-family: var(--font-sora);
+    font-weight: 500;
+    transition: background-color 1000ms ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background-color: white;
+    color: var(--color-emeraude);
+    border: 2px solid var(--color-emeraude);
+  }
+
+  /* CTA secondaire (contour vert) */
+  .btn-secondary {
+    background-color: white;
+    color: var(--color-emeraude);
+    border: 2px solid var(--color-emeraude);
+    border-radius: var(--radius-btn);
+    padding: 0.630rem 1.45rem;
+    font-family: var(--font-sora);
+    font-weight: 500;
+    transition: background-color 2000ms ease;
+    cursor: pointer;
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-emeraude);
+    color: white;
+    border: 2px solid white;
+  }
+
+  /* Badge (ex: "Conçu pour les enseignants du secondaire") */
+  .badge-eyebrow {
+    display: inline-block;
+    background-color: var(--color-emeraude-50);
+    color: var(--color-emeraude);
+    border-radius: var(--radius-pill);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-family: var(--font-sora);
+  }
+
+  /* Carte avantage (fond plein émeraude) */
+  .card-advantage {
+    background-color: var(--color-emeraude);
+    color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+}

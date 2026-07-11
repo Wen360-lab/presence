@@ -23,7 +23,7 @@ const advantages = [
 
 export default function Avantages() {
   return (
-    <section id="avantages" className="px-6 pt-20">
+    <section id="avantages" className="px-6 py-20">
       <div className="mx-auto max-w-5xl">
 
         <motion.h2

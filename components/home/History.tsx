@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function History() {
   return (
-    <section className="px-6 pt-20 bg-white w-full">
+    <section className="px-6 py-20 bg-white w-full">
       <div className="mx-auto max-w-5xl">
         <motion.h2
           className="text-center text-3xl uppercase text-black md:text-4xl"
@@ -28,7 +28,12 @@ export default function History() {
           Un projet né d&apos;un besoin simple, devenu une app complète.
         </motion.p>
 
-        <div className="w-full mt-12 flex flex-col md:flex-row gap-4 bg-cream p-6 rounded-2xl shadow-xl border border-grey/50">
+        <motion.div className="w-full mt-12 flex flex-col md:flex-row gap-4 bg-cream p-6 rounded-2xl shadow-xl border border-grey/50"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
 
           {/* La description */}
           <div className="w-full md:w-1/2 flex items-center justify-center">
@@ -55,7 +60,7 @@ export default function History() {
           >
             <Image src="/Programmer.svg" alt="Illustration d'un programmeur" width={300} height={300} />
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -27,7 +27,7 @@ export default function TestimonialCard({ photo, quote, name, role, delay = 0 }:
       </div>
 
       {/* Contenu */}
-      <div className="flex flex-col items-start text-left">
+      <div className="flex flex-1 flex-col items-start text-left">
         <p className="text-lg italic text-black">&laquo; {quote} &raquo;</p>
 
         <div className="mt-4 flex gap-1 text-yellow-400">

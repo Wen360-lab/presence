@@ -9,6 +9,7 @@ import Features from '@/components/home/Features'
 import Avantages from '@/components/home/Avantages'
 import Testimonials from '@/components/home/Avis'
 import History from '@/components/home/History'
+import Cta from '@/components/home/Cta'
 
 
 
@@ -23,6 +24,7 @@ export default function Home() {
       <Avantages/>
       <Testimonials/>
       <History/>
+      <Cta/>
 
 
     </section>

@@ -22,6 +22,7 @@
 
   /* Rayon des boutons (valeur Figma) */
   --radius-btn: 10px;
+  --radius-pill: 999px;
 }
 
 @layer base {

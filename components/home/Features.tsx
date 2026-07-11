@@ -15,7 +15,7 @@ const features = [
     description: "Ajoutez vos élèves une seule fois, réutilisez la liste à chaque séance sans ressaisie.",
   },
   {
-    illustration: '/typing.svg',
+    illustration: '/Typing.svg',
     title: 'Pointez en un geste',
     description: "Un clic par élève suffit : présent, absent, en attente. Toute la classe en quelques secondes.",
   },

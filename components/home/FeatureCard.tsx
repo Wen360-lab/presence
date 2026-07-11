@@ -21,7 +21,7 @@ export default function FeatureCard({ illustration, title, description, number, 
       transition={{ duration: 0.5, delay }}
     >
       <div className="mb-4 flex w-full items-center justify-between">
-        <Image src={illustration} alt="" width={140} height={140} />
+        <Image src={illustration} alt="carte présentant les fonctionnalités de Présence : Organiser les classes, contituer les listes, pointer, générer un fichier complet" width={140} height={140} />
         <span className="font-oswald text-8xl text-emeraude-50">
           {String(number).padStart(2, '0')}
         </span>

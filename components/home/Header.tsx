@@ -21,7 +21,7 @@ export default function Header() {
           priority
         /> 
 
-      {/* Navigation - cachée sur mobile, visible à partir de md */}
+      {/* Navigation - cachée sur mobile, visible à partir de lg */}
       <nav className="hidden lg:block">
         <ul className="flex gap-10 text-base font-inter text-white">
           <li><a href="#accueil">Accueil</a></li>
@@ -59,7 +59,7 @@ export default function Header() {
 
               
                 <Link href=""
-                    className="inline-block rounded-[10px] px-5 py-2 text-sm font-semibold text-emeraude bg-white shadow border-2 border-emeraude"
+                    className="inline-block rounded-btn px-5 py-2 text-sm font-semibold text-emeraude bg-white shadow border-2 border-emeraude"
                 >
                     Se connecter
                 </Link>

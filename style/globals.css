@@ -61,7 +61,7 @@
     padding: 0.625rem 1.25rem;
     font-family: var(--font-sora);
     font-weight: 500;
-    transition: background-color 1000ms ease;
+    transition: background-color 0.15s ease;
     border: 2px solid transparent;
     cursor: pointer;
   }
@@ -80,7 +80,7 @@
     padding: 0.630rem 1.45rem;
     font-family: var(--font-sora);
     font-weight: 500;
-    transition: background-color 2000ms ease;
+    transition: background-color 0.15s ease;
     cursor: pointer;
   }
   .btn-secondary:hover {

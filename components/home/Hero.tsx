@@ -63,7 +63,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-10 flex flex-col gap-4 md:gap-10 sm:flex-row"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

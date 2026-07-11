@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="px-6 py-16 md:py-24">
+    <section id="accueil" className="px-6 py-16 md:py-24">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 lg:flex-row lg:justify-between">
 
         {/* Illustration gauche */}

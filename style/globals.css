@@ -108,3 +108,7 @@
     padding: 1.5rem;
   }
 }
+
+section {
+  scroll-margin-top: 100px; /* hauteur approximative de ton header */
+}

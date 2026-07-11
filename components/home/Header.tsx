@@ -51,10 +51,10 @@ export default function Header() {
       {isOpen && (
         <nav className="absolute flex flex-col items-center justify-center top-full left-0 w-full bg-emeraude-50 shadow lg:hidden">
           <ul className="flex flex-col gap-4 p-6 text-sm font-medium font-inter text-emeraude">
-            <li className=""><Link href="#accueil" onClick={() => setIsOpen(false)}>Accueil</Link></li>
-            <li className=""><Link href="#fonctionnalite" onClick={() => setIsOpen(false)}>Fonctionnalités</Link></li>
-            <li className=""><Link href="#avantages" onClick={() => setIsOpen(false)}>Avantages</Link></li>
-            <li className=""><Link href="#apropos" onClick={() => setIsOpen(false)}>À propos</Link></li>
+            <li className=""><a href="#accueil" onClick={() => setIsOpen(false)}>Accueil</a></li>
+            <li className=""><a href="#fonctionnalite" onClick={() => setIsOpen(false)}>Fonctionnalités</a></li>
+            <li className=""><a href="#avantages" onClick={() => setIsOpen(false)}>Avantages</a></li>
+            <li className=""><a href="#apropos" onClick={() => setIsOpen(false)}>À propos</a></li>
             <li>
 
               

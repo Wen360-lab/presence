@@ -6,6 +6,7 @@ import '@/style/globals.css'
 import Header from '@/components/home/Header'
 import Hero from '@/components/home/Hero'
 import Features from '@/components/home/Features'
+import Avantages from '@/components/home/Avantages'
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero/>
       <hr className='w-full bg-emeraude p-1'/>
       <Features/>
+      <Avantages/>
 
 
     </section>

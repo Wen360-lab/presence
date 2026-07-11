@@ -10,6 +10,7 @@ import Avantages from '@/components/home/Avantages'
 import Testimonials from '@/components/home/Avis'
 import History from '@/components/home/History'
 import Cta from '@/components/home/Cta'
+import Footer from '@/components/home/Footer'
 
 
 
@@ -25,8 +26,7 @@ export default function Home() {
       <Testimonials/>
       <History/>
       <Cta/>
-
-
+      <Footer/>
     </section>
   );
 }

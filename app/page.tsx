@@ -8,8 +8,11 @@ import Hero from '@/components/home/Hero'
 import Features from '@/components/home/Features'
 import Avantages from '@/components/home/Avantages'
 import Testimonials from '@/components/home/Avis'
+import History from '@/components/home/History'
 
 
+
+// La page Principale
 export default function Home() {
   return (
     <section className='flex flex-col items-center justify-center' >
@@ -19,6 +22,7 @@ export default function Home() {
       <Features/>
       <Avantages/>
       <Testimonials/>
+      <History/>
 
 
     </section>

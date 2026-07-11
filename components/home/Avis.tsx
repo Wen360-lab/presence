@@ -17,7 +17,7 @@ const testimonials = [
     role: 'Professeur de mathématiques, lycée',
   },
   {
-    photo: '/Images/awa.jpg',
+    photo: '/Images/Awa.jpg',
     quote: 'Le PDF exporté est parfait à transmettre à l\u2019administration.',
     name: 'Awa K.',
     role: 'Professeure principale',

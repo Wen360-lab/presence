@@ -14,7 +14,7 @@ const advantages = [
   },
   {
     title: 'Efficacité',
-    description: 'Une seule interface pour tout centraliser, sans ressaisie ni papier.',
+    description: 'Une seule interface pour tout centraliser, sans ressaisie ni papier. Simplicité et efficacité.',
   },
 ]
 

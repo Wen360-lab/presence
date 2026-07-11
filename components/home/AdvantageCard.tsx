@@ -17,11 +17,16 @@ export default function AdvantageCard({ number, title, description, delay = 0 }:
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
+      whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
     >
-      <span className="font-oswald text-2xl">
+      <span className="font-sora font-extrabold text-2xl">
         {String(number).padStart(2, '0')} — {title}
       </span>
-      <p className="mt-4 text-sm text-white/85">{description}</p>
+      <div className='flex flex-col bg-white mt-4 rounded-btn p-4'>
+        <h3 className='text-2xl text-black'>Pointer en quelques secondes</h3>
+       <p className="mt-4 text-sm text-grey">{description}</p>
+
+      </div>
     </motion.div>
   )
 }

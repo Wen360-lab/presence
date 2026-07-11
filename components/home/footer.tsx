@@ -54,8 +54,8 @@ export default function Footer() {
           <div>
             <p className="font-oswald text-sm font-semibold text-black">Contact</p>
             <ul className="mt-4 flex flex-col gap-3 text-sm text-grey">
-              <li>+241 1145689</li>
-              <li>Adressemailficti@gmail.com</li>
+              <li>+241 66792795</li>
+              <li>wenetchou330@gmail.com</li>
             </ul>
             <div className="mt-4 flex gap-4 text-emeraude">
               <a href="#" aria-label="Facebook" className="hover:text-emeraude/70"><FaFacebookF size={18} /></a>

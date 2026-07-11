@@ -22,7 +22,6 @@
 
   /* Rayon des boutons (valeur Figma) */
   --radius-btn: 10px;
-  --radius-pill: 999px;
 }
 
 @layer base {
@@ -45,13 +44,6 @@
 }
 
 @layer components {
-  /* Nav en pilule */
-  .nav-pill {
-    background-color: var(--color-surface);
-    border-radius: var(--radius-pill);
-    padding: 0.5rem 1rem;
-    font-family: var(--font-inter);
-  }
 
   /* CTA primaire (vert plein) */
   .btn-primary {

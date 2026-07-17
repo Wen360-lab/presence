@@ -2,6 +2,7 @@
 'use client'
 import { motion } from 'motion/react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -69,8 +70,8 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <button className="btn-primary shadow-xl">Commencer l&apos;appel</button>
-            <button className="btn-secondary shadow-xl">Créer un compte</button>
+            <Link href="/connexion" className="btn-primary shadow-xl">Commencer l&apos;appel</Link>
+            <Link href="/createAcount" className="btn-secondary shadow-xl">Créer un compte</Link>
           </motion.div>
 
         </div>

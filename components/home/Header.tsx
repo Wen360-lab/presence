@@ -32,7 +32,7 @@ export default function Header() {
       </nav>
 
       {/* CTA - caché sur mobile */}
-      <Link href=""
+      <Link href="/connexion"
         className="hidden lg:inline-block rounded-xl px-5 py-3 text-sm font-semibold font-sora text-white border-2 border-white  shadow-xl bg-emeraude hover:bg-white hover:text-emeraude duration-500"
       >
         Se connecter
@@ -58,7 +58,7 @@ export default function Header() {
             <li>
 
               
-                <Link href=""
+                <Link href="/connexion"
                     className="inline-block rounded-btn px-5 py-2 text-sm font-semibold text-emeraude bg-white shadow border-2 border-emeraude"
                 >
                     Se connecter

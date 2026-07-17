@@ -37,8 +37,8 @@ export default function Cta() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
-                <button className="btn-secondary shadow-xl">Créer un compte</button>
-                <Link href=''><p className='text-white font-sora text-sm hover:text-emeraude-50 duration-300'>Déjà utilisateur ? Se connecter</p></Link>
+                <Link href='/createAcount' className="btn-secondary shadow-xl">Créer un compte</Link>
+                <Link href='/connexion'><p className='text-white font-sora text-sm hover:text-emeraude-50 duration-300'>Déjà utilisateur ? Se connecter</p></Link>
             </motion.div>
         </section>
     )

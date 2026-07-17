@@ -5,9 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { FiMail, FiLock } from 'react-icons/fi'
+import { FiMail } from 'react-icons/fi'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import AuthInput from '@/components/auth/AuthInput'
+import PasswordInput from '@/components/auth/PasswordInput'
 import type { Account } from '@/types/auth'
 
 export default function ConnexionPage() {
@@ -53,7 +54,7 @@ export default function ConnexionPage() {
           className="object-contain"
           priority
         /> 
-        <Image src="/Login.svg" alt="" width={320} height={320} priority />
+        <Image src="/Login.svg" alt="illustration Login" width={320} height={320} priority />
       </motion.div>
 
       <motion.div
@@ -79,13 +80,9 @@ export default function ConnexionPage() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <AuthInput
-            icon={<FiLock size={18} />}
-            type="password"
-            placeholder="Mot de passe"
+          <PasswordInput
             value={motDePasse}
             onChange={(e) => setMotDePasse(e.target.value)}
-            required
           />
 
           {/* Message d'erreur affiché seulement si une tentative a échoué */}
@@ -94,6 +91,13 @@ export default function ConnexionPage() {
           <button type="submit" className="btn-primary mt-4">
             Se connecter
           </button>
+
+          {/* Dans le cas où l'enseigant oublie son mot de passe, il crée un autre compte */}
+          <p className="mt-3 text-center text-xs text-grey">
+            <Link href="/createAcount" className="text-emeraude">
+              Mot de passe oublié ?
+            </Link>
+          </p>
         </form>
 
         <p className="mt-4 text-center text-xs text-grey">

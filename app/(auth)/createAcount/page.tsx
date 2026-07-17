@@ -5,9 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { FiUser, FiMail, FiLock } from 'react-icons/fi'
+import { FiUser, FiMail } from 'react-icons/fi'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import AuthInput from '@/components/auth/AuthInput'
+import PasswordInput from '@/components/auth/PasswordInput'
 import type { Account } from '@/types/auth'
 
 export default function CreerComptePage() {
@@ -47,7 +48,7 @@ export default function CreerComptePage() {
           className="object-contain"
           priority
         /> 
-        <Image src="/Signup.svg" alt="" width={320} height={320} priority />
+        <Image src="/Signup.svg" alt="illustration Signup" width={320} height={320} priority />
       </motion.div>
 
       {/* Carte du formulaire */}
@@ -82,13 +83,9 @@ export default function CreerComptePage() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <AuthInput
-            icon={<FiLock size={18} />}
-            type="password"
-            placeholder="Mot de passe"
+          <PasswordInput
             value={motDePasse}
             onChange={(e) => setMotDePasse(e.target.value)}
-            required
           />
 
           <button type="submit" className="btn-primary mt-4">

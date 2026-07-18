@@ -9,7 +9,7 @@ type ClassCardProps = {
 
 export default function ClassCard({ classe }: ClassCardProps) {
   return (
-    // Toute la carte est cliquable, sans bouton d'action visible dessus (décision prise ensemble).
+    // Toute la carte est cliquable, sans bouton d'action visible dessus
     <Link
       href={`/dashboard/${classe.id}`}
       className="block rounded-xl bg-white p-5 transition hover:shadow-md"

@@ -82,7 +82,7 @@
     border: 2px solid white;
   }
 
-  /* Badge (ex: "Conçu pour les enseignants du secondaire") */
+  /* Badge */
   .badge-eyebrow {
     display: inline-block;
     background-color: var(--color-emeraude-50);

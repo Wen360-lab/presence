@@ -79,7 +79,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Barre supérieure visible uniquement sur mobile : logo + burger */}
-      <div className="flex items-center justify-between bg-emeraude px-5 py-4 text-white lg:hidden">
+      <div className="sticky top-0 z-50 flex items-center justify-between bg-emeraude px-5 py-4 text-white lg:hidden">
         <Image src="/logoPresence.svg" alt="Présence" width={90} height={45} className="object-contain" />
         <button onClick={() => setIsOpen(!isOpen)} aria-label="Menu">
           {isOpen ? <FiX size={26} /> : <FiMenu size={26} />}
@@ -87,7 +87,7 @@ export default function Sidebar() {
       </div>
 
       {/* Sidebar desktop : toujours visible à partir de lg */}
-      <aside className="hidden w-55 shrink-0 flex-col items-center justify-between bg-emeraude px-5 py-6 text-white lg:flex">
+      <aside className="hidden w-55 shrink-0 flex-col items-center justify-between bg-emeraude px-5 py-6 text-white lg:flex lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto">
         {contenu}
       </aside>
 

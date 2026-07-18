@@ -14,7 +14,7 @@ export default function MesClassesPage() {
       <h1 className="text-3xl font-semibold uppercase">Mes classes</h1>
       <p className="mt-2 text-grey">Gérer intelligemment chaque salle de classe.</p>
 
-      <Link href="/dashboard/nouvelle-classe" className="btn-primary mt-6 inline-flex items-center gap-2">
+      <Link href="/dashboard/nouvelle-classe" className="btn-primary mt-6 inline-flex items-center gap-2 shadow-xl">
         <FiPlus size={18} />
         Nouvelle classe
       </Link>

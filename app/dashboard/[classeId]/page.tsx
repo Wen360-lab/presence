@@ -119,9 +119,9 @@ export default function DetailClassePage() {
         </button>
       </div>
 
-      <div className="mt-8 overflow-hidden rounded-2xl bg-white">
-        <table className="w-full text-left text-sm">
-          <thead className="bg-cream text-grey">
+      <div className="mt-6 overflow-x-auto rounded-2xl bg-white">
+        <table className="w-full min-w-125 text-left text-sm">
+          <thead className="bg-white text-grey shadow">
             <tr>
               <th className="px-5 py-3">Nom</th>
               <th className="px-5 py-3">Prénom</th>

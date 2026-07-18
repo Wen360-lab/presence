@@ -1,15 +1,27 @@
-// Un élève appartient à une seule classe (via classeId dans Presence, pas ici).
+// types/dashboard.ts
 export type Eleve = {
-    id: string
-    nom: string
-    prenom: string
+  id: string
+  nom: string
+  prenom: string
 }
 
-// Une classe créée par l'enseignant.
 export type Classe = {
-    id: string
-    nom: string       // ex: "Salle 09"
-    niveau: string    // ex: "Sixième"
-    matiere: string   // ex: "Mathématiques"
-    eleves: Eleve[]
+  id: string
+  nom: string
+  niveau: string
+  matiere: string
+  eleves: Eleve[]
+}
+
+// Une ligne de présence : un élève, une date, un statut.
+// Toutes les présences de toutes les classes vivent dans un seul tableau,
+// filtré selon le besoin (par classe+date pour le registre, par élève pour l'historique).
+export type Statut = 'Présent' | 'Absent' | 'Retard'
+
+export type Presence = {
+  id: string
+  classeId: string
+  eleveId: string
+  date: string // format "2026-07-17"
+  statut: Statut
 }

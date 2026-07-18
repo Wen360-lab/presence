@@ -64,7 +64,7 @@ export default function SuiviElevePage() {
 
       {/* Statistiques */}
       <div className="mt-4 flex flex-wrap gap-2 sm:gap-3">
-        <div className="rounded-btn bg-emeraude-50 px-3 py-1.5 text-xs font-semibold text-emeraude sm:px-5 sm:py-2 sm:text-sm shadow-xl border-2">
+        <div className="rounded-btn bg-emeraude-50 px-3 py-1.5 text-xs font-semibold text-emeraude sm:px-5 sm:py-2 sm:text-sm border-2">
           Présence(s) : {stats.presences}
         </div>
         <div className="rounded-btn bg-red-50 px-3 py-1.5 text-xs font-semibold text-red-700 sm:px-5 sm:py-2 sm:text-sm border-2">

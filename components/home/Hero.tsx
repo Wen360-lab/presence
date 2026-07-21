@@ -30,7 +30,7 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Conçu pour les enseignants du secondaire
+            Conçu pour les enseignants du primaire au lycée
           </motion.span>
 
           <motion.h1

@@ -69,7 +69,7 @@ export default function SuiviSeancePage() {
     doc.setFontSize(11)
     doc.text(`Niveau : ${classeActuelle.niveau}`, 14, 27)
     doc.text(`Matière : ${classeActuelle.matiere}`, 14, 34)
-    doc.text(`Professeur : ${account?.nom ?? '—'}`, 14, 41)
+    doc.text(`Enseignant(e) : ${account?.civilite ?? ''} ${account?.nom ?? '—'}`, 14, 41)
     doc.text(`Séance du ${formaterDate(dateChoisie)}`, 14, 48)
 
     autoTable(doc, {

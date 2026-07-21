@@ -19,12 +19,13 @@ export default function CreerComptePage() {
   const [, setAccount] = useLocalStorage<Account | null>('presence:account', null)
 
   const [nom, setNom] = useState('')
+  const [civilite, setCivilite] = useState<'M.' | 'Mme'>('M.')
   const [email, setEmail] = useState('')
   const [motDePasse, setMotDePasse] = useState('')
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault() // empêche le rechargement natif du formulaire
-    setAccount({ nom, email, motDePasse })
+    setAccount({ civilite, nom, email, motDePasse })
     router.push('/connexion') // l'enseignant doit se connecter après inscription
   }
 
@@ -75,6 +76,27 @@ export default function CreerComptePage() {
             onChange={(e) => setNom(e.target.value)}
             required
           />
+          <div className="flex gap-4 w-full rounded-btn border border-emeraude/40 bg-emeraude-50 py-3 px-4 text-sm outline-none focus:border-emeraude">
+            <label className="flex items-center gap-2">
+              <input
+                className='text-grey'
+                type="radio"
+                name="civilite"
+                checked={civilite === 'M.'}
+                onChange={() => setCivilite('M.')}
+              />
+              M.
+            </label>
+            <label className="flex items-center gap-2">
+              <input
+                type="radio"
+                name="civilite"
+                checked={civilite === 'Mme'}
+                onChange={() => setCivilite('Mme')}
+              />
+              Mme
+            </label>
+          </div>
           <AuthInput
             icon={<FiMail size={18} />}
             type="email"

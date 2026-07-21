@@ -67,7 +67,7 @@ export default function SuiviSeancePage() {
       startY: 34,
       head: [['Nom', 'Prénom', 'Statut']],
       body: registre.map((r) => [r.nom, r.prenom, r.statut]),
-      headStyles: { fillColor: [18, 101, 49] }, // vert émeraude, cohérent avec la charte
+      headStyles: { fillColor: [18, 101, 49] }, // vert émeraude
     })
 
     doc.save(`registre_${classeActuelle.nom}_${dateChoisie}.pdf`)

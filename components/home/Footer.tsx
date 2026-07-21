@@ -8,9 +8,9 @@ export default function Footer() {
     <footer className="border-t-4 w-full md:mt-20 border-emeraude bg-cream px-6 py-12">
       <div className="mx-auto max-w-6xl">
 
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <div className="flex flex-col gap-10 md:flex-row md:justify-between">
 
-          {/* Logo +  */}
+          {/* Logo  */}
           <div className="flex flex-col items-start">
             <Image src="/LogoPresence (1).svg" alt="Présence" width={120} height={60} className="object-contain" />
             <p className="mt-1 text-sm text-grey">La clé du succès</p>

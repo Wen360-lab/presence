@@ -71,7 +71,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <Link href="/connexion" className="btn-primary shadow-xl">Commencer l&apos;appel</Link>
-            <Link href="/createAcount" className="btn-secondary shadow-xl">Créer un compte</Link>
+            <Link href="/createAcount" className="btn-secondary px-8 shadow-xl">Créer un compte</Link>
           </motion.div>
 
         </div>

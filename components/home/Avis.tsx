@@ -32,7 +32,7 @@ const testimonials = [
 
 export default function Avis() {
   return (
-    <section id="avis" className="px-6 py-20">
+    <section id="avis" className="px-6 py-20 w-full">
       <div className="mx-auto max-w-4xl">
 
         <motion.h2

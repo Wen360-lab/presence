@@ -35,7 +35,7 @@ export default function Footer() {
               <li>+241 77478646</li>
               <li>wenetchou330@gmail.com</li>
             </ul>
-            <div className="mt-4 flex gap-4 text-emeraude">
+            <div className="mt-4 flex gap-4 text-black">
               
               <a href="https://github.com/Wen360-lab"
                 target="_blank"
@@ -43,7 +43,7 @@ export default function Footer() {
                 aria-label="GitHub"
                 className="hover:text-emeraude/70"
               >
-                <FaGithub size={18} />
+                <FaGithub size={22} />
               </a>
             </div>
           </div>

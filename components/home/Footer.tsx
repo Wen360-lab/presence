@@ -12,7 +12,7 @@ export default function Footer() {
 
           {/* Logo +  */}
           <div className="flex flex-col items-start">
-            <Image src="/logoPresence (1).svg" alt="Présence" width={120} height={60} className="object-contain" />
+            <Image src="/LogoPresence (1).svg" alt="Présence" width={120} height={60} className="object-contain" />
             <p className="mt-1 text-sm text-grey">La clé du succès</p>
           </div>
 

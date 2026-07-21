@@ -30,7 +30,7 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Conçu pour les enseignants du primaire au lycée
+            La gestion des présences pensée pour tous les enseignants
           </motion.span>
 
           <motion.h1
@@ -60,7 +60,7 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            5 à 10 minutes perdues à l&apos;appel. Présence règle ça en quelques secondes.
+           Commencez votre cours sans attendre. L&apos;appel est déjà terminé.
           </motion.p>
 
           <motion.div

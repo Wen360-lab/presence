@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { FiArrowLeft, FiDownload } from 'react-icons/fi'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import type { Classe, Presence, Statut } from '@/types/dashboard'
+import type { Account } from '@/types/auth'
 
 const styleStatut: Record<Statut, string> = {
   Présent: 'bg-emeraude-50 text-emeraude',
@@ -27,6 +28,9 @@ export default function SuiviSeancePage() {
   const { classeId } = useParams<{ classeId: string }>()
   const [classes] = useLocalStorage<Classe[]>('presence:classes', [])
   const [presences] = useLocalStorage<Presence[]>('presence:presences', [])
+
+  // Nécessaire pour afficher le nom de l'enseignant dans l'en-tête du PDF.
+  const [account] = useLocalStorage<Account | null>('presence:account', null)
 
   // Date sélectionnée par l'enseignant, "aujourd'hui" par défaut.
   const [dateChoisie, setDateChoisie] = useState(getDateDuJour())
@@ -60,11 +64,16 @@ export default function SuiviSeancePage() {
 
     doc.setFontSize(16)
     doc.text(`Registre de présence — ${classeActuelle.nom}`, 14, 18)
+    
+    // Bloc d'informations complémentaires : matière, niveau, enseignant, date.
     doc.setFontSize(11)
-    doc.text(`Séance du ${formaterDate(dateChoisie)}`, 14, 26)
+    doc.text(`Niveau : ${classeActuelle.niveau}`, 14, 27)
+    doc.text(`Matière : ${classeActuelle.matiere}`, 14, 34)
+    doc.text(`Enseignant : ${account?.nom ?? '—'}`, 14, 41)
+    doc.text(`Séance du ${formaterDate(dateChoisie)}`, 14, 48)
 
     autoTable(doc, {
-      startY: 34,
+      startY: 56,
       head: [['Nom', 'Prénom', 'Statut']],
       body: registre.map((r) => [r.nom, r.prenom, r.statut]),
       headStyles: { fillColor: [18, 101, 49] }, // vert émeraude

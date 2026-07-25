@@ -32,8 +32,18 @@ const testimonials = [
 
 export default function Avis() {
   return (
-    <section id="avis" className="px-6 py-20 w-full">
-      <div className="mx-auto max-w-4xl">
+    <section id="avis" className="px-6 py-20 w-full bg-menthe">
+      <div className="mx-auto max-w-4xl flex flex-col items-center text-center">
+        {/* badge vert plein */}
+        <motion.span
+          className="badge-eyebrow mb-6 font-semibold shadow"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Témoignages
+        </motion.span>
 
         <motion.h2
           className="text-center text-3xl uppercase text-black md:text-4xl"
@@ -52,10 +62,10 @@ export default function Avis() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Conçu à partir des besoins du terrain.
+          Ils utilisent Présence au quotidien pour simplifier la gestion de l&apos;assiduité de leurs apprenants.
         </motion.p>
 
-        <div className="mt-12 flex flex-col gap-6">
+        <div className="mt-12 items-center flex flex-col gap-6">
           {testimonials.map((t, index) => (
             <TestimonialCard
               key={t.name}

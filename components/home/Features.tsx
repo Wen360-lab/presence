@@ -5,9 +5,9 @@ import FeatureCard from './FeatureCard'
 
 const features = [
   {
-    illustration: '/collegeclass.svg',
+    illustration: '/SocialSchool.svg',
     title: 'Organisez vos classes',
-    description: "Créez autant de salles que nécessaire : une par classe, matière ou groupe d'élèves.",
+    description: "Créez autant de classes que nécessaire, chacune avec sa propre liste d'élèves.",
   },
   {
     illustration: '/teamchecklist.svg',
@@ -17,20 +17,30 @@ const features = [
   {
     illustration: '/Typing.svg',
     title: 'Pointez en un geste',
-    description: "Un clic par élève suffit : présent, absent, en attente. Toute la classe en quelques secondes.",
+    description: "Présent, absent ou en retard : un clic par élève suffit pour clôturer l'appel.",
   },
   {
     illustration: '/Download.svg',
     title: 'Générez votre registre',
-    description: "Téléchargez le registre de présence de la séance, prêt à archiver ou transmettre.",
+    description: "Téléchargez le registre de présence de la séance, prêt à archiver ou transmettre à l'administration.",
   },
 ]
 
 export default function Fonctionnalites() {
   return (
     <section id="fonctionnalites" className="px-6 py-20 bg-white w-full">
-      <div className="mx-auto max-w-5xl">
-
+      <div className="mx-auto max-w-5xl flex flex-col items-center">
+         {/* badge vert plein */}
+        <motion.span
+          className="badge-eyebrow mb-6 font-semibold shadow"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Fonctionnalités
+        </motion.span>
+        
         <motion.h2
           className="text-center text-3xl uppercase text-black md:text-4xl"
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +48,7 @@ export default function Fonctionnalites() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Découvrez les fonctionnalités de Présence
+          Découvrez les fonctionnalités <br /> de Présence
         </motion.h2>
 
         <motion.p

@@ -60,7 +60,7 @@ export default function CreerComptePage() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        <h1 className="text-center text-2xl font-semibold text-emeraude">
+        <h1 className="text-center text-3xl font-bold text-emeraude">
           Inscrivez-vous gratuitement
         </h1>
         <p className="mt-2 text-center text-sm text-grey">
@@ -69,43 +69,57 @@ export default function CreerComptePage() {
 
         <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4">
           <AuthInput
+            id='name'
+            label="Nom complet"
             icon={<FiUser size={18} />}
             type="text"
-            placeholder="Nom complet"
+            placeholder="John Doe"
             value={nom}
             onChange={(e) => setNom(e.target.value)}
             required
           />
-          <div className="flex gap-4 w-full rounded-btn border border-emeraude/40 bg-emeraude-50 py-3 px-4 text-sm outline-none focus:border-emeraude">
-            <label className="flex items-center gap-2">
-              <input
-                className='text-grey'
-                type="radio"
-                name="civilite"
-                checked={civilite === 'M.'}
-                onChange={() => setCivilite('M.')}
-              />
-              M.
-            </label>
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="civilite"
-                checked={civilite === 'Mme'}
-                onChange={() => setCivilite('Mme')}
-              />
-              Mme
-            </label>
-          </div>
+          <fieldset className="flex flex-col gap-1">
+            <legend className="text-sm font-medium text-emeraude mb-1">
+              Civilité
+            </legend>
+
+            <div className="flex gap-4 w-full rounded-btn border border-emeraude/40 bg-emeraude-50 py-3 px-4 text-sm">
+              <label className="flex items-center gap-2">
+                <input
+                  className="accent-emeraude"
+                  type="radio"
+                  name="civilite"
+                  checked={civilite === 'M.'}
+                  onChange={() => setCivilite('M.')}
+                />
+                M.
+              </label>
+              <label className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="civilite"
+                  className="accent-emeraude"
+                  checked={civilite === 'Mme'}
+                  onChange={() => setCivilite('Mme')}
+                />
+                Mme
+              </label>
+            </div>
+          </fieldset>
           <AuthInput
+            id="email"
+            label="Adresse email"
             icon={<FiMail size={18} />}
             type="email"
-            placeholder="Email"
+            placeholder="johndoe@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <PasswordInput
+            id="password"
+            label="Mot de passe"
+            placeholder='********'
             value={motDePasse}
             onChange={(e) => setMotDePasse(e.target.value)}
           />

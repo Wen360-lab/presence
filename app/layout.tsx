@@ -1,8 +1,9 @@
-import { Oswald, Inter, Sora } from "next/font/google";
+import { Oswald, Inter, Sora, Fraunces } from "next/font/google";
 
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces" });
 
 import "@/style/globals.css";
 

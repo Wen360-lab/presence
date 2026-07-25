@@ -2,21 +2,23 @@
 
 
 @theme {
-  /* Couleur de emeraude */
+  /* Couleur  emeraude */
   --color-emeraude: #126531;
   --color-emeraude-50: #dcece3;
 
 
   /* Fond principal (crème) */
-  --color-cream:      #f8f7f2;
-  --color-surface:    #ffffff;
+  --color-cream: #f8f7f2;
+  --color-menthe: #E8F0E9;
+  --color-surface: #ffffff;
 
   /* Texte neutres  */
   --color-grey: #666666;
 
   /* Typographie (3 rôles distincts) */
-  --font-oswald: "Oswald", sans-serif;   /* titres */
+  --font-fraunces: "Fraunces", serif;   /* titres */
   --font-inter:  "Inter", sans-serif;    /* sous-titres, corps */
+  --font-oswald: "Oswald", sans-serif;   /* titres cartes */
   --font-sora:   "Sora", sans-serif;     /* badges, boutons */
 
 
@@ -33,7 +35,7 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-oswald);
+    font-family: var(--font-fraunces);
     font-weight: 700;
   }
 
@@ -54,7 +56,7 @@
     padding: 0.625rem 1.25rem;
     font-family: var(--font-sora);
     font-weight: 500;
-    transition: background-color 0.15s ease;
+    transition: 500ms ease;
     border: 2px solid transparent;
     cursor: pointer;
   }
@@ -73,7 +75,7 @@
     padding: 0.630rem 1.45rem;
     font-family: var(--font-sora);
     font-weight: 500;
-    transition: background-color 0.15s ease;
+    transition: 500ms ease;
     cursor: pointer;
   }
   .btn-secondary:hover {
@@ -98,7 +100,7 @@
     background-color: var(--color-emeraude);
     color: #ffffff;
     border-radius: 0.75rem;
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   /* Carte témoignage (fond plein blanc) */

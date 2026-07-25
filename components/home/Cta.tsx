@@ -16,7 +16,7 @@ export default function Cta() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                    Votre prochaine séance mérite mieux <br /> qu&apos;une feuille de papier
+                    Digitalisez vos présences <br /> dès aujourd&apos;hui
                 </motion.h2>
 
                 <motion.p
@@ -26,7 +26,7 @@ export default function Cta() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    Créez gratuitement votre compte en quelques minutes seulement.
+                    Rejoignez les équipes qui ont déjà simplifier leur gestion administrative avec Présence.
                 </motion.p>
             </div>
 
@@ -37,8 +37,8 @@ export default function Cta() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
-                <Link href='/createAcount' className="btn-secondary shadow-xl">Créer un compte</Link>
-                <Link href='/connexion'><p className='text-white font-sora text-sm hover:text-emeraude-50 duration-300'>Déjà utilisateur ? Se connecter</p></Link>
+                <Link href='/createAcount' className="btn-secondary hover:bg-emeraude duration-300 shadow-xl">Commencer gratuitement</Link>
+                <Link href='/connexion'><p className='text-white font-sora text-sm hover:text-menthe duration-300'>Déjà utilisateur ? Se connecter</p></Link>
             </motion.div>
         </section>
     )

@@ -5,18 +5,24 @@ import { InputHTMLAttributes } from 'react'
 // ce style à chaque nouveau formulaire.
 type IconInputProps = InputHTMLAttributes<HTMLInputElement> & {
   icon: React.ReactNode
+  label:string
 }
 
-export default function IconInput({ icon, ...props }: IconInputProps) {
+export default function IconInput({ icon, label,...props }: IconInputProps) {
   return (
     <div className="relative">
-      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-emeraude">
-        {icon}
-      </span>
-      <input
-        {...props}
-        className="w-full rounded-btn border border-emeraude/40 bg-emeraude-50 py-3 pl-11 pr-4 text-sm outline-none focus:border-emeraude"
-      />
+      <label className='text-sm font-medium text-emeraude mb-1'>
+        {label}
+      </label>
+      <div className="relative">
+        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-emeraude">
+          {icon}
+        </span>
+        <input
+          {...props}
+          className="w-full rounded-btn border border-emeraude/40 bg-emeraude-50 py-3 pl-11 pr-4 text-sm outline-none focus:border-emeraude"
+        />
+      </div>
     </div>
   )
 }

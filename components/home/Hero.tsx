@@ -24,23 +24,23 @@ export default function Hero() {
         <div className="flex max-w-2xl flex-col items-center text-center">
 
           <motion.span
-            className="badge-eyebrow mb-6 font-semibold"
+            className="badge-eyebrow mb-6 font-semibold shadow-xl shadow-white"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            La gestion des présences pensée pour tous les enseignants
+            Digitalisez vos registres d&apos;appel
           </motion.span>
 
           <motion.h1
-            className="text-4xl uppercase text-black leading-tight md:text-5xl lg:text-6xl"
+            className="text-4xl text-black leading-tight md:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Pointer, suivre et centraliser
+            Pointer, suivre et <span className='italic text-emeraude'>centraliser</span>
           </motion.h1>
 
           <motion.p
@@ -50,7 +50,7 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Une application simple pour des registres d&apos;appel fiables, cours après cours.
+            Prenez les présences en moins de 30 secondes, suivez l&apos;assiduité et retrouvez automatiquement tout l&apos;historique de vos élèves.
           </motion.p>
 
           <motion.p

@@ -64,7 +64,7 @@ export default function ConnexionPage() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        <h1 className="text-center text-2xl font-semibold text-emeraude">
+        <h1 className="text-center text-3xl font-bold text-emeraude">
           Connexion
         </h1>
         <p className="mt-2 text-center text-sm text-grey">
@@ -73,14 +73,19 @@ export default function ConnexionPage() {
 
         <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4">
           <AuthInput
+            id="email"
+            label="Adresse email"
             icon={<FiMail size={18} />}
             type="email"
-            placeholder="Email"
+            placeholder="johndoe@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <PasswordInput
+            id="password"
+            label="Mot de passe"
+            placeholder='********'
             value={motDePasse}
             onChange={(e) => setMotDePasse(e.target.value)}
           />

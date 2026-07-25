@@ -72,25 +72,28 @@ export default function NouvelleClassePage() {
 
           <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4">
             <IconInput
+              label='Nom de la salle'
               icon={<FiHome size={18} />}
               type="text"
-              placeholder="Nom de la salle"
+              placeholder="Salle 3B"
               value={nom}
               onChange={(e) => setNom(e.target.value)}
               required
             />
             <IconInput
+              label='Matière'
               icon={<FiBook size={18} />}
               type="text"
-              placeholder="Matière"
+              placeholder="Mathématiques"
               value={matiere}
               onChange={(e) => setMatiere(e.target.value)}
               required
             />
             <IconInput
+              label='Niveau'
               icon={<FiTrendingUp size={18} />}
               type="text"
-              placeholder="Niveau"
+              placeholder="Terminale A1"
               value={niveau}
               onChange={(e) => setNiveau(e.target.value)}
               required

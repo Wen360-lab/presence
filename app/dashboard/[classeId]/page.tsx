@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { FiPlus, FiEdit2, FiTrash2, FiClock, FiArrowLeft } from 'react-icons/fi'
+import { FiPlus, FiEdit2, FiTrash2, FiClock, FiArrowLeft, FiUser} from 'react-icons/fi'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import Modal from '@/components/ui/Modal'
 import IconInput from '@/components/ui/IconInput'
@@ -145,10 +145,10 @@ export default function DetailClassePage() {
                       <Link href={`/dashboard/${classeId}/suivi/${eleve.id}`} aria-label="Historique">
                         <FiClock size={16} />
                       </Link>
-                      <button onClick={() => ouvrirEdition(eleve)} aria-label="Modifier">
+                      <button onClick={() => ouvrirEdition(eleve)} className="cursor-pointer" aria-label="Modifier">
                         <FiEdit2 size={16} />
                       </button>
-                      <button onClick={() => handleSupprimer(eleve.id, eleve)} aria-label="Supprimer">
+                      <button onClick={() => handleSupprimer(eleve.id, eleve)} className="cursor-pointer" aria-label="Supprimer">
                         <FiTrash2 size={16} />
                       </button>
                     </div>
@@ -167,17 +167,19 @@ export default function DetailClassePage() {
       >
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <IconInput
-            icon={null}
+            label='Nom(s)'
+            icon={<FiUser size={18} />}
             type="text"
-            placeholder="Nom"
+            placeholder="MBA MEZUI"
             value={nom}
             onChange={(e) => setNom(e.target.value)}
             required
           />
           <IconInput
-            icon={null}
+            label='Prénom(s)'
+            icon={<FiUser size={18} />}
             type="text"
-            placeholder="Prénom"
+            placeholder="Jean Junior"
             value={prenom}
             onChange={(e) => setPrenom(e.target.value)}
             required

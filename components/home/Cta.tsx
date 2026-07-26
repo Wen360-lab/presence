@@ -16,7 +16,7 @@ export default function Cta() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                    Digitalisez vos présences <br /> dès aujourd&apos;hui
+                    Digitalisez vos registres d&apos;appel <br /> dès aujourd&apos;hui
                 </motion.h2>
 
                 <motion.p

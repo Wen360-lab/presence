@@ -50,7 +50,7 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Prenez les présences en moins de 30 secondes, suivez l&apos;assiduité et retrouvez automatiquement tout l&apos;historique de vos élèves.
+            Une application simple pour piloter l&apos;assiduité se vos apprenants et digitaliser tous vos registres d&apos;appel.
           </motion.p>
 
           <motion.p

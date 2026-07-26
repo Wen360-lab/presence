@@ -1,7 +1,7 @@
 // components/Faq.tsx
 'use client'
 import { useState } from 'react'
-import { motion } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
 import { FiPlus, FiX } from 'react-icons/fi'
 
 const questions = [
@@ -11,7 +11,7 @@ const questions = [
       "Non, Présence est entièrement gratuit dans cette version. C'est un projet pensé pour rester simple et accessible aux enseignants, sans coût d'hébergement ni d'abonnement.",
   },
   {
-    question: 'Mes données sont-elles en toute sécurité avec Présence ?',
+    question: 'Mes données sont-elles\nsécurisées avec Présence ?',
     reponse:
       "Vos classes, élèves et présences sont enregistrés directement dans le navigateur de votre appareil (localStorage), pas sur un serveur distant. Cela évite tout risque de fuite en ligne, mais signifie aussi que ces données restent propres à cet appareil et ce navigateur.",
   },
@@ -21,7 +21,7 @@ const questions = [
       "Pas pour le moment. Les données étant stockées localement, elles ne se synchronisent pas automatiquement entre un téléphone, une tablette et un ordinateur.",
   },
   {
-    question: 'Comment exporter mes registres registres ?',
+    question: 'Comment exporter mes registres ?',
     reponse:
       "Depuis l'écran Suivi d'une classe, choisissez une date de séance puis cliquez sur \"Exporter en PDF\" pour télécharger le registre complet, prêt à transmettre à l'administration.",
   },
@@ -70,13 +70,14 @@ export default function Faq() {
           Foire aux questions
         </motion.h2>
 
-        <div className="mt-10 flex flex-col gap-3">
+        {/* w-full ajouté ici pour que les cartes gardent une largeur stable */}
+        <div className="mt-10 flex w-full flex-col gap-3">
           {questions.map((item, index) => {
             const estOuvert = ouvert === index
             return (
               <motion.div
                 key={item.question}
-                className="overflow-hidden rounded-2xl bg-white"
+                className="overflow-hidden rounded-2xl bg-white shadow"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -87,17 +88,29 @@ export default function Faq() {
                   className="flex w-full items-center justify-between px-6 py-4 text-left"
                   aria-expanded={estOuvert}
                 >
-                  <span className="font-fraunces font-semibold text-emeraude md:w-200">{item.question}</span>
+                  <span className="font-fraunces font-semibold text-emeraude">{item.question}</span>
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emeraude-50 text-emeraude cursor-pointer">
                     {estOuvert ? <FiX size={16} /> : <FiPlus size={16} />}
                   </span>
                 </button>
 
-                {estOuvert && (
-                  <div className="px-6 pb-5 text-sm text-grey">
-                    {item.reponse}
-                  </div>
-                )}
+                {/* Animation fluide de la hauteur à l'ouverture/fermeture */}
+                <AnimatePresence initial={false}>
+                  {estOuvert && (
+                    <motion.div
+                      key="contenu"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 font-inter pb-5 text-sm text-grey whitespace-pre-line">
+                        {item.reponse}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             )
           })}

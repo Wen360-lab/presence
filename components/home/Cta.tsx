@@ -26,7 +26,7 @@ export default function Cta() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    Rejoignez les équipes qui ont déjà simplifier leur gestion administrative avec Présence.
+                    Rejoignez les équipes qui ont déjà simplifié leur gestion administrative avec Présence.
                 </motion.p>
             </div>
 

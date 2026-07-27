@@ -65,15 +65,15 @@ export default function History() {
               /> 
             </motion.span>
             <motion.p
-              className="text-lg md:text-xl font-semibold text-justify font-fraunces text-grey"
+              className="text-lg md:text-xl font-semibold text-justify font-fraunces text-black"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              &quot;Présence est né d&apos;un constat simple : <span className='text-black'> la gestion de l&apos;assiduité en classe repose encore trop souvent sur des feuilles de papier, faciles à perdre, à oublier ou à falsifier</span>.
-              Ce projet a été pensé pour <span className='text-black'>simplifier ce geste quotidien des enseignants, pointer sa classe, sans complexité inutile, en gardant une trace fiable et exploitable à tout moment </span>.
-              Développé comme projet de fin d&apos;études, Présence propose une première version volontairement simple, centrée sur l&apos;essentiel : <span className='text-black'>créer ses classes, gérer ses élèves, pointer les présences et exporter ses registres</span>.&quot;
+              &quot;Présence est né d&apos;un constat simple : la gestion de l&apos;assiduité en classe repose encore trop souvent sur des feuilles de papier, faciles à perdre, à oublier ou à falsifier.
+              Ce projet a été pensé pour simplifier ce geste quotidien des enseignants, pointer sa classe, sans complexité inutile, en gardant une trace fiable et exploitable à tout moment.
+              Développé comme projet de fin d&apos;études, Présence propose une première version volontairement simple, centrée sur l&apos;essentiel : créer ses classes, gérer ses élèves, pointer les présences et exporter ses registres.&quot;
             </motion.p>
           </div>
 

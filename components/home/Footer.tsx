@@ -25,6 +25,7 @@ export default function Footer() {
               <li><a href="#fonctionnalites" className="hover:text-emeraude">Fonctionnalités</a></li>
               <li><a href="#avantages" className="hover:text-emeraude">Avantages</a></li>
               <li><a href="#apropos" className="hover:text-emeraude">À propos</a></li>
+              <li><a href="#faq" className="hover:text-emeraude">Faq</a></li>
             </ul>
           </div>
 

@@ -9,7 +9,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-6 bg-emeraude backdrop-blur-md border-b border-white w-full shadow-xl">
+    <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-6 bg-emeraude backdrop-blur-md border-b border-white w-full shadow-2xl">
 
       {/* Logo */}
       <Image 

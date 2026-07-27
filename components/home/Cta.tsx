@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Cta() {
     return (
 
-        <section className="flex flex-col items-center gap-8 md:gap-20 px-6 py-20 bg-emeraude w-full">
+        <section className="flex flex-col items-center gap-8 md:gap-20 px-6 py-25 bg-emeraude w-full">
             {/* Titre et sous-titre */}
             <div className="mx-auto max-w-5xl">
                 <motion.h2
@@ -20,7 +20,7 @@ export default function Cta() {
                 </motion.h2>
 
                 <motion.p
-                className="mx-auto mt-4 max-w-lg text-center text-white"
+                className="mx-auto mt-4 max-w-lg text-center text-white font-semibold"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

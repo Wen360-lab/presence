@@ -6,7 +6,7 @@ import { IoMdMail } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <footer className="border-t-4 w-full border-emeraude bg-menthe px-6 py-12">
+    <footer className="border-t-4 w-full border-emeraude bg-menthe px-6 py-20">
       <div className="mx-auto max-w-6xl">
 
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">

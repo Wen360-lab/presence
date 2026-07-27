@@ -22,12 +22,12 @@ export default function FeatureCard({ illustration, title, description, number, 
     >
       <div className="mb-4 flex w-full items-center justify-between">
         <Image src={illustration} alt="carte présentant les fonctionnalités de Présence : Organiser les classes, contituer les listes, pointer, générer un fichier complet" width={140} height={140} />
-        <span className="font-fraunces text-8xl text-emeraude">
+        <span className="font-fraunces text-7xl text-emeraude">
           {String(number).padStart(2, '0')}
         </span>
       </div>
       <h3 className="font-oswald text-2xl font-bold text-emeraude">{title}</h3>
-      <p className="mt-2 text-sm text-grey">{description}</p>
+      <p className="mt-2 text-base text-grey">{description}</p>
     </motion.div>
   )
 }

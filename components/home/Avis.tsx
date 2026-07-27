@@ -32,7 +32,7 @@ const testimonials = [
 
 export default function Avis() {
   return (
-    <section id="avis" className="px-6 py-20 w-full bg-menthe">
+    <section id="avis" className="px-6 py-25 w-full bg-menthe">
       <div className="mx-auto max-w-4xl flex flex-col items-center text-center">
         {/* badge vert plein */}
         <motion.span
@@ -56,7 +56,7 @@ export default function Avis() {
         </motion.h2>
 
         <motion.p
-          className="mx-auto mt-4 max-w-lg text-center text-grey"
+          className="mx-auto mt-4 max-w-lg text-center text-emeraude font-semibold"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

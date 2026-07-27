@@ -37,7 +37,7 @@ export default function Faq() {
   const [ouvert, setOuvert] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="px-6 py-20">
+    <section id="faq" className="px-6 py-25">
       <div className="mx-auto max-w-3xl flex flex-col items-center">
 
         {/* badge vert plein */}
@@ -50,18 +50,9 @@ export default function Faq() {
         >
           FAQ
         </motion.span>
-        <motion.p
-          className="text-center text-xs font-semibold uppercase tracking-wide text-emeraude"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          Questions fréquentes
-        </motion.p>
 
         <motion.h2
-          className="mt-2 text-center text-3xl uppercase text-black md:text-4xl"
+          className="text-center text-3xl uppercase text-black md:text-4xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -69,6 +60,15 @@ export default function Faq() {
         >
           Foire aux questions
         </motion.h2>
+        <motion.p
+          className="mt-2 text-center font-semibold  text-emeraude"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          Les questions fréquentes.
+        </motion.p>
 
         {/* w-full ajouté ici pour que les cartes gardent une largeur stable */}
         <div className="mt-10 flex w-full flex-col gap-3">
@@ -88,7 +88,7 @@ export default function Faq() {
                   className="flex w-full items-center justify-between px-6 py-4 text-left"
                   aria-expanded={estOuvert}
                 >
-                  <span className="font-fraunces font-semibold text-emeraude">{item.question}</span>
+                  <span className="font-fraunces text-base font-bold text-emeraude">{item.question}</span>
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emeraude-50 text-emeraude cursor-pointer">
                     {estOuvert ? <FiX size={16} /> : <FiPlus size={16} />}
                   </span>
@@ -105,7 +105,7 @@ export default function Faq() {
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 font-inter pb-5 text-sm text-grey whitespace-pre-line">
+                      <div className="px-6 font-inter pb-5 text-base text-grey whitespace-pre-line">
                         {item.reponse}
                       </div>
                     </motion.div>

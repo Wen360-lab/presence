@@ -28,7 +28,7 @@ const features = [
 
 export default function Fonctionnalites() {
   return (
-    <section id="fonctionnalites" className="px-6 py-20 bg-white w-full">
+    <section id="fonctionnalites" className="px-6 pt-50 pb-25 bg-white w-full">
       <div className="mx-auto max-w-5xl flex flex-col items-center">
          {/* badge vert plein */}
         <motion.span
@@ -48,11 +48,11 @@ export default function Fonctionnalites() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Découvrez les fonctionnalités <br /> de Présence
+          Comment fonctionne Présence ?
         </motion.h2>
 
         <motion.p
-          className="mx-auto mt-4 max-w-lg text-center text-grey"
+          className="mx-auto mt-4 max-w-lg text-center text-emeraude font-semibold"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

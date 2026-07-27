@@ -97,10 +97,11 @@
 
   /* Carte avantage (fond plein émeraude) */
   .card-advantage {
-    background-color: var(--color-emeraude);
+    background-color: var(--color-surface);
     color: #ffffff;
     border-radius: 0.75rem;
     padding: 1rem;
+    border: 1px solid var(--color-menthe);
   }
 
   /* Carte témoignage (fond plein blanc) */

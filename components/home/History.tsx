@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function History() {
   return (
-    <section id="apropos" className="px-6 py-20 bg-white w-full">
+    <section id="apropos" className="px-6 py-25 bg-white w-full">
       <div className="mx-auto max-w-5xl flex  flex-col items-center">
          {/* badge vert plein */}
         <motion.span
@@ -29,13 +29,13 @@ export default function History() {
         </motion.h2>
 
         <motion.p
-          className="mx-auto mt-4 max-w-lg text-center text-grey"
+          className="mx-auto mt-4 max-w-lg text-center text-emeraude font-semibold"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Un projet né d&apos;un besoin simple, devenu une app complète.
+          Un projet né d&apos;un besoin simple, devenu une application complète.
         </motion.p>
 
         <motion.div className="w-full mt-12 flex flex-col md:flex-row gap-4 justify-evenly bg-menthe p-6 rounded-2xl shadow-xl border border-grey/50"

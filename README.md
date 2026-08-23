@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# PRÉSENCE - la clé du succès
 
-First, run the development server:
+Application web de gestion de présence destinée aux enseignants gabonais. PRÉSENCE permet de créer des classes, gérer des listes d'élèves, faire l'appel en quelques clics et suivre les statistiques de présence, avec export PDF à la clé.
+
+ **Démo en ligne** : [presence-coral.vercel.app](https://presence-coral.vercel.app)
+
+---
+
+## Sommaire
+
+- [Aperçu](#-aperçu)
+- [Fonctionnalités](#-fonctionnalités)
+- [Stack technique](#-stack-technique)
+- [Captures d'écran](#-captures-décran)
+- [Installation](#-installation)
+- [Utilisation](#-utilisation)
+- [Structure du projet](#-structure-du-projet)
+- [Choix techniques](#-choix-techniques)
+- [Roadmap](#-roadmap)
+- [Auteur](#-auteur)
+
+---
+
+## Aperçu
+
+PRÉSENCE simplifie la gestion quotidienne de la présence en classe pour les enseignants : moins de papier, moins de temps perdu, plus de visibilité sur l'assiduité des élèves.
+
+##  Fonctionnalités
+
+-  **Authentification** — connexion sécurisée avec garde de session
+- **Gestion des classes** — création, consultation et détail de chaque classe
+-  **Gestion des élèves** — ajout, modification et suppression via un système modal
+- **Faire l'appel** — interface rapide de prise de présence, avec verrouillage de session pour éviter les doublons
+-  **Suivi par élève** — historique individuel de présence
+-  **Suivi par séance** — vue d'ensemble par séance avec export PDF dynamique
+-  **Interface soignée** — design vert émeraude / crème, animations fluides (Motion)
+
+##  Stack technique
+
+| Catégorie | Technologie |
+|---|---|
+| Framework | Next.js (App Router) |
+| Langage | TypeScript |
+| Style | Tailwind CSS v4 |
+| Animations | Motion (`motion/react`) |
+| Export PDF | jsPDF |
+| Persistance | localStorage (hook `useLocalStorage` custom) |
+| Déploiement | Vercel |
+
+##  Captures d'écran
+
+<!-- Ajoute tes captures ici, par exemple : -->
+
+
+
+## Installation
+
+Clone le repo et installe les dépendances :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/wen360lab/presence.git
+cd presence
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Lance le serveur de développement :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+L'application est accessible sur [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Utilisation
 
-To learn more about Next.js, take a look at the following resources:
+1. Crée un compte ou connecte-toi
+2. Ajoute une nouvelle classe
+3. Ajoute tes élèves à la classe
+4. Fais l'appel en un clic
+5. Consulte le suivi par élève ou par séance
+6. Exporte les données de présence en PDF
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##  Structure du projet
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+présence/
+├── app/                  # Pages et routes (App Router)
+├── components/           # Composants réutilisables
+├── hooks/                # Hooks custom (ex: useLocalStorage)
+├── lib/                  # Fonctions utilitaires
+├── types/                # Types TypeScript (Account, Classe, Eleve, Presence)
+└── public/               # Assets statiques
+```
 
-## Deploy on Vercel
+##  Choix techniques
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **localStorage plutôt qu'un backend** : décision volontaire  pour un MVP local-first, permettant de livrer une V1 fonctionnelle et testable sans dépendance serveur.
+- **Pattern à trois états** pour les modals de gestion des élèves (ajout / édition / suppression), garantissant une UX cohérente.
+- **Verrouillage de session** lors de l'appel, pour éviter les erreurs de double saisie.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##  Roadmap
+
+- [ ] Backend avec base de données réelle (remplacement de localStorage)
+- [ ] Rôle **administrateur** (gestion multi-enseignants, multi-établissements)
+- [ ] Notifications aux parents
+- [ ] Statistiques avancées (taux d'absentéisme, tendances par période)
+
+##  Auteur
+
+**MAKANAGA ETCHOU Wen Joanel** — Étudiant développeur web & web mobile, École 241 (Libreville, Gabon)

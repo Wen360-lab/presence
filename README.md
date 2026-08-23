@@ -50,7 +50,38 @@ PRÉSENCE simplifie la gestion quotidienne de la présence en classe pour les en
 
 ##  Captures d'écran
 
-<!-- Ajoute tes captures ici, par exemple : -->
+### Page d'accueil
+![Accueil](./Home.png)
+
+### Connexion / Inscription
+<p float="left">
+  <img src="./SignIn.png" width="49%" />
+  <img src="./SignUp.png" width="49%" />
+</p>
+
+### Mes classes
+![Mes classes](./Dashboard5.png)
+
+### Créer une nouvelle classe
+![Nouvelle classe](./Dashboard2.png)
+
+### Détail d'une classe
+![Détail d'une classe](./Dashboard3.png)
+
+### Ajouter un élève
+![Ajouter un élève](./Dashboard4.png)
+
+### Faire l'appel
+<p float="left">
+  <img src="./Dashboard7.png" width="49%" />
+  <img src="./Dashboard8.png" width="49%" />
+</p>
+
+### Suivi par séance
+![Suivi par séance](./Dashboard9.png)
+
+### Suivi par élève
+![Suivi par élève](./Dashboard10.png)
 
 
 

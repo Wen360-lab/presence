@@ -83,6 +83,9 @@ PRÉSENCE simplifie la gestion quotidienne de la présence en classe pour les en
 ### Suivi par élève
 ![Suivi par élève](./Dashboard10.png)
 
+### Export PDF
+![Export PDF](./registre_Terminale C_2026-08-23.pdf)
+
 
 
 ## Installation

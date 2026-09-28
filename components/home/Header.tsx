@@ -15,8 +15,8 @@ export default function Header() {
       <Image 
           src="/logoPresence.svg" 
           alt="Présence - La clé du succès" 
-          width={90} 
-          height={90} 
+          width={100} 
+          height={100} 
           className="object-contain"
           priority
         /> 
